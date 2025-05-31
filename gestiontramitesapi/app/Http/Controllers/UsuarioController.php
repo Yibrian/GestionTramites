@@ -63,7 +63,7 @@ class UsuarioController extends Controller
 
     public function show(Usuario $usuario)
     {
-        $usuario->load('tramites');
+        //$usuario->load('tramites');
         return response()->json($usuario, Response::HTTP_OK);
     }
 

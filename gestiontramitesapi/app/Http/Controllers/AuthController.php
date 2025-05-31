@@ -16,16 +16,12 @@ class AuthController extends Controller
             'contrasena' => 'required',
         ]);
 
-        
-        if (Auth::guard('web')->attempt([
-            'correo' => $credentials['correo'],
-            'password' => $credentials['contrasena'],
-        ])) {
-            $user = Auth::guard('web')->user();
-            
-            $token = $user->createToken('token')->plainTextToken;
+        $usuario = \App\Models\Usuario::where('correo', $credentials['correo'])->first();
+
+        if ($usuario && \Hash::check($credentials['contrasena'], $usuario->contrasena)) {
+            $token = $usuario->createToken('token')->plainTextToken;
             return response()->json([
-                'user' => $user,
+                'user' => $usuario,
                 'token' => $token,
                 'token_type' => 'Bearer',
             ], Response::HTTP_OK);

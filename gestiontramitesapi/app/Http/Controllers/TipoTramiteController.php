@@ -54,7 +54,7 @@ class TipoTramiteController extends Controller
 
     public function show(TipoTramite $tipoTramite)
     {
-        $tipoTramite->load('tramites');
+        //$tipoTramite->load('tramites');
         return response()->json($tipoTramite, Response::HTTP_OK);
     }
 
