@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/neutral_light_5"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Barra superior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingBottom="12dp"
+            android:weightSum="3">
+
+            <TextView
+                android:id="@+id/tvCancelar"
+                android:text="Cancelar"
+                android:textColor="@color/highlight_1"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start" />
+
+            <TextView
+                android:text="Editar trámite"
+                style="@style/TextH3"
+                android:textColor="@color/highlight_1"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Título del trámite -->
+        <TextView
+            android:text="Título del trámite"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etNombreTramite"
+            android:hint="Agregar título"
+            android:textColorHint="@color/neutral_dark_2"
+            android:minHeight="48dp"
+            android:background="@drawable/bg_rounded_edittext"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Fecha y hora -->
+        <TextView
+            android:text="Fecha"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/etFecha"
+                android:hint="Fecha"
+                android:textColorHint="@color/neutral_dark_2"
+                android:minHeight="48dp"
+                android:focusable="false"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_rounded_edittext"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+
+            <EditText
+                android:id="@+id/etHora"
+                android:hint="Hora"
+                android:textColorHint="@color/neutral_dark_2"
+                android:minHeight="48dp"
+                android:focusable="false"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/bg_rounded_edittext"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <!-- Tipo de trámite -->
+        <TextView
+            style="@style/TextBodyS"
+            android:text="Tipo de trámite"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spTipoTramite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@drawable/bg_rounded_spinner"
+            android:padding="12dp"/>
+
+        <!-- Ciudad -->
+        <TextView
+            style="@style/TextBodyS"
+            android:text="Ciudad"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spCiudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@drawable/bg_rounded_spinner"
+            android:padding="12dp"/>
+
+        <!-- Lugar -->
+        <TextView
+            android:text="Lugar"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etLugar"
+            android:hint="Lugar donde se realiza"
+            android:textColorHint="@color/neutral_dark_2"
+            android:minHeight="48dp"
+            android:background="@drawable/bg_rounded_edittext"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Descripción -->
+        <TextView
+            android:text="Descripción"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:hint="Descripción detallada"
+            android:textColorHint="@color/neutral_dark_2"
+            android:minLines="3"
+            android:minHeight="48dp"
+            android:gravity="top"
+            android:background="@drawable/bg_rounded_edittext"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Frecuencia -->
+        <TextView
+            android:text="Frecuencia"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/etFrecuencia"
+            android:hint="Frecuencia del trámite"
+            android:textColorHint="@color/neutral_dark_2"
+            android:minHeight="48dp"
+            android:background="@drawable/bg_rounded_edittext"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Requisito -->
+        <TextView
+            android:text="Requisito"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Spinner
+            android:id="@+id/spRequisito"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:background="@drawable/bg_rounded_spinner"
+            android:padding="12dp"/>
+
+        <!-- Recordar -->
+        <Button
+            android:id="@+id/btnAgregarNotificacion"
+            android:text="Agregar recordatorio"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:backgroundTint="@color/highlight_1"
+            android:textColor="@color/neutral_light_5"/>
+
+        <!-- Valor monetario -->
+        <TextView
+            android:text="Valor monetario"
+            style="@style/TextBodyS"
+            android:textColor="@color/highlight_1"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <CheckBox
+                android:id="@+id/cbTieneValor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="Tiene valor monetario"
+                style="@style/TextBodyM"
+                android:layout_marginStart="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/etValor"
+            android:hint="Valor en pesos"
+            android:textColorHint="@color/neutral_dark_2"
+            android:inputType="numberDecimal"
+            android:minHeight="48dp"
+            android:enabled="false"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_rounded_edittext"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <!-- Botón Guardar -->
+        <Button
+            android:id="@+id/btnGuardarCambios"
+            android:text="Guardar cambios"
+            android:layout_marginTop="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:backgroundTint="@color/highlight_1"
+            android:textColor="@color/neutral_light_5"/>
+
+        <!-- Botón Eliminar -->
+        <Button
+            android:id="@+id/btnEliminarTramite"
+            android:text="Eliminar trámite"
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:backgroundTint="@color/error_1"
+            android:textColor="@color/neutral_light_5"/>
+    </LinearLayout>
+</ScrollView>
