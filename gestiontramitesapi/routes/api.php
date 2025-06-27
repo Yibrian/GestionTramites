@@ -25,10 +25,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 Route::post('auth/login', [AuthController::class, 'login'])->name('auth.login');
-
+Route::post('auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
 
 Route::middleware('auth:sanctum')->group(function () {
-    Route::post('auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
+    
     Route::apiResource('usuarios', UsuarioController::class);
     Route::apiResource('tipo-tramites', TipoTramiteController::class);
     Route::apiResource('tramites', TramiteController::class);
