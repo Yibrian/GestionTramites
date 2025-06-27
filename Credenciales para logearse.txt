@@ -1,3 +1,5 @@
+La apliacion movil del proyecto final es la carpeta que se llama "GestionTramites", por que "gestiontramitesapi" es la aplicacion en laravel
+
 En la aplicacion hay 3 usuarios
 
 1. correo: yibrian@gmail.com
@@ -8,4 +10,4 @@ En la aplicacion hay 3 usuarios
    contraseña: 123456
 
 Nota!!!
-Solo en la cuenta 1 hay registros en las demas no 
+Solo en la cuenta 1 hay registro de tramites, en las otras dos cuentas no hay tramites registrados, pero son funcionales y se puede registar nuevos.
